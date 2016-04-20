@@ -15,7 +15,7 @@ app.factory('ordersService', ['$http',
 
             return $http.get(serviceBase + 'api/values')
                 .then(function (results) {
-                    alert(results);
+                    // alert(results);
                     return results;
                 });
         };

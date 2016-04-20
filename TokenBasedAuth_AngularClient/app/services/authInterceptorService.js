@@ -9,10 +9,11 @@ app.factory('authInterceptorService', ['$q', '$location', 'localStorageService',
             config.headers = config.headers || {};
 
             var authData = localStorageService.get('authorizationData');
-            alert('interceptor + token: ' + authData.token);
 
             if (authData) {
                 config.headers.Authorization = 'Bearer ' + authData.token;
+
+                // alert('interceptor + token: ' + authData.token);
             }
 
             return config;
